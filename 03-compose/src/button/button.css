@@ -1,0 +1,21 @@
+.button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    
+    border-radius: .4rem;
+
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    height: 3.8rem;
+    letter-spacing: .1rem;
+    line-height: 3.8rem;
+    padding: 0 3.0rem;
+    
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
