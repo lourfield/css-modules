@@ -1,6 +1,8 @@
 .button {
+    
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-right: 20px;
     
     background-color: #9b4dca;
     border: 0.1rem solid #9b4dca;
@@ -56,20 +58,3 @@
     color: #9b4dca;
 }
 
-.button-clear {
-    background-color: transparent;
-    border-color: transparent;
-    color: #9b4dca;
-}
-
-.button-clear:focus,
-.button-clear:hover {
-    background-color: transparent;
-    border-color: transparent;
-    color: #606c76;
-}
-
-.button-clear[disabled]:focus,
-.button-clear[disabled]:hover {
-    color: #9b4dca;
-}

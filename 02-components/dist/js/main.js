@@ -378,21 +378,22 @@ function updateLink(linkElement, obj) {
 "use strict";
 
 
-var _button = __webpack_require__(3);
+var _buttonPrimary = __webpack_require__(3);
 
-var _button2 = _interopRequireDefault(_button);
+var _buttonPrimary2 = _interopRequireDefault(_buttonPrimary);
 
-var _alert = __webpack_require__(6);
+var _buttonOutline = __webpack_require__(6);
 
-var _alert2 = _interopRequireDefault(_alert);
+var _buttonOutline2 = _interopRequireDefault(_buttonOutline);
+
+var _buttonClear = __webpack_require__(9);
+
+var _buttonClear2 = _interopRequireDefault(_buttonClear);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Add the element to the content;
-// Import the button element from the button.js;
-document.getElementById('content').innerHTML = '' + _button2.default + _alert2.default;
-
-// Import the alert element from the element.js;
+document.getElementById('content').innerHTML = '' + _buttonPrimary2.default + _buttonOutline2.default + _buttonClear2.default; // Import the button element from the button.js;
 
 /***/ }),
 /* 3 */
@@ -415,10 +416,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * Creating a button element and add the class from button.css.
  * @type {String}
  */
-var button = '<button class="' + _index2.default['button'] + ' ' + _index2.default['button-outline'] + '">Save Changes</button>';
+var button = '<button class="' + _index2.default['button'] + '">Save Changes</button>';
 
 // Export the button to be used on the other files.
-// Import the styles from button.css file.
+// Import the styles from index.css file.
 exports.default = button;
 
 /***/ }),
@@ -456,13 +457,12 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "._3CYk8__button {\n    margin-top: 20px;\n    margin-bottom: 20px;\n    \n    background-color: #9b4dca;\n    border: 0.1rem solid #9b4dca;\n    border-radius: .4rem;\n    color: #fff;\n    cursor: pointer;\n    display: inline-block;\n    font-size: 1.1rem;\n    font-weight: 700;\n    height: 3.8rem;\n    letter-spacing: .1rem;\n    line-height: 3.8rem;\n    padding: 0 3.0rem;\n    text-align: center;\n    text-decoration: none;\n    text-transform: uppercase;\n    white-space: nowrap;\n}\n\n._3CYk8__button:focus,\n._3CYk8__button:hover {\n    background-color: #606c76;\n    border-color: #606c76;\n    color: #fff;\n    outline: 0;\n}\n\n._3CYk8__button[disabled] {\n    cursor: default;\n    opacity: .5;\n}\n\n._3CYk8__button[disabled]:focus,\n._3CYk8__button[disabled]:hover {\n    background-color: #9b4dca;\n    border-color: #9b4dca;\n}\n\n._3TVLI__button-outline {\n    background-color: transparent;\n    color: #9b4dca;\n}\n\n._3TVLI__button-outline:focus, ._3TVLI__button-outline:hover {\n    background-color: transparent;\n    border-color: #606c76;\n    color: #606c76;\n}\n\n._3TVLI__button-outline[disabled]:focus,\n._3TVLI__button-outline[disabled]:hover {\n    border-color: inherit;\n    color: #9b4dca;\n}\n\n.vxPYU__button-clear {\n    background-color: transparent;\n    border-color: transparent;\n    color: #9b4dca;\n}\n\n.vxPYU__button-clear:focus,\n.vxPYU__button-clear:hover {\n    background-color: transparent;\n    border-color: transparent;\n    color: #606c76;\n}\n\n.vxPYU__button-clear[disabled]:focus,\n.vxPYU__button-clear[disabled]:hover {\n    color: #9b4dca;\n}", ""]);
+exports.push([module.i, "._64QU___button {\n    \n    margin-top: 20px;\n    margin-bottom: 20px;\n    margin-right: 20px;\n    \n    background-color: #9b4dca;\n    border: 0.1rem solid #9b4dca;\n    border-radius: .4rem;\n    color: #fff;\n    cursor: pointer;\n    display: inline-block;\n    font-size: 1.1rem;\n    font-weight: 700;\n    height: 3.8rem;\n    letter-spacing: .1rem;\n    line-height: 3.8rem;\n    padding: 0 3.0rem;\n    text-align: center;\n    text-decoration: none;\n    text-transform: uppercase;\n    white-space: nowrap;\n}\n\n._64QU___button:focus,\n._64QU___button:hover {\n    background-color: #606c76;\n    border-color: #606c76;\n    color: #fff;\n    outline: 0;\n}\n\n._64QU___button[disabled] {\n    cursor: default;\n    opacity: .5;\n}\n\n._64QU___button[disabled]:focus,\n._64QU___button[disabled]:hover {\n    background-color: #9b4dca;\n    border-color: #9b4dca;\n}\n\n.eA5RU__button-outline {\n    background-color: transparent;\n    color: #9b4dca;\n}\n\n.eA5RU__button-outline:focus, .eA5RU__button-outline:hover {\n    background-color: transparent;\n    border-color: #606c76;\n    color: #606c76;\n}\n\n.eA5RU__button-outline[disabled]:focus,\n.eA5RU__button-outline[disabled]:hover {\n    border-color: inherit;\n    color: #9b4dca;\n}\n\n", ""]);
 
 // exports
 exports.locals = {
-	"button": "_3CYk8__button",
-	"button-outline": "_3TVLI__button-outline",
-	"button-clear": "vxPYU__button-clear"
+	"button": "_64QU___button",
+	"button-outline": "eA5RU__button-outline"
 };
 
 /***/ }),
@@ -483,11 +483,14 @@ var _index2 = _interopRequireDefault(_index);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * Creating an alert element and add the class from alert.css.
+ * Creating a button element and add the class from button.css.
  * @type {String}
  */
-var alert = '<div class="' + _index2.default['alert'] + ' ' + _index2.default['alert-success'] + '" role="alert">\n  <strong>Well done!</strong> You successfully read this important alert message.\n</div>'; // Import the styles from alert.css file.
-exports.default = alert;
+var button = '<button class="' + _index2.default['button'] + '">Cancel</button>';
+
+// Export the button to be used on the other files.
+// Import the styles from index.css file.
+exports.default = button;
 
 /***/ }),
 /* 7 */
@@ -524,19 +527,80 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "._2cqZo__alert {\n    \n    padding: 0.75rem 1.25rem;\n    margin-bottom: 1rem;\n    border: 1px solid transparent;\n    border-radius: 0.25rem;\n    \n    margin-top: 20px;\n    margin-bottom: 20px;\n}\n\n._3MnJA__alert-heading {\n    color: inherit;\n}\n\n._1g3aE__alert-link {\n    font-weight: bold;\n}\n\n._3AG6h__alert-dismissible .a8uCb__close {\n    position: relative;\n    top: -0.75rem;\n    right: -1.25rem;\n    padding: 0.75rem 1.25rem;\n    color: inherit;\n}\n\n.lFWWZ__alert-success {\n    background-color: #dff0d8;\n    border-color: #d0e9c6;\n    color: #3c763d;\n}\n\n.lFWWZ__alert-success hr {\n    border-top-color: #c1e2b3;\n}\n\n.lFWWZ__alert-success ._1g3aE__alert-link {\n    color: #2b542c;\n}\n\n._2FP2E__alert-info {\n    background-color: #d9edf7;\n    border-color: #bcdff1;\n    color: #31708f;\n}\n\n._2FP2E__alert-info hr {\n    border-top-color: #a6d5ec;\n}\n\n._2FP2E__alert-info ._1g3aE__alert-link {\n    color: #245269;\n}\n\n.It85e__alert-warning {\n    background-color: #fcf8e3;\n    border-color: #faf2cc;\n    color: #8a6d3b;\n}\n\n.It85e__alert-warning hr {\n    border-top-color: #f7ecb5;\n}\n\n.It85e__alert-warning ._1g3aE__alert-link {\n    color: #66512c;\n}\n\n._2CeXz__alert-danger {\n    background-color: #f2dede;\n    border-color: #ebcccc;\n    color: #a94442;\n}\n\n._2CeXz__alert-danger hr {\n    border-top-color: #e4b9b9;\n}\n\n._2CeXz__alert-danger ._1g3aE__alert-link {\n    color: #843534;\n}", ""]);
+exports.push([module.i, "._35F37__button {\n    margin-top: 20px;\n    margin-bottom: 20px;\n    margin-right: 20px;\n    \n    background-color: #9b4dca;\n    border: 0.1rem solid #9b4dca;\n    border-radius: .4rem;\n    color: #fff;\n    cursor: pointer;\n    display: inline-block;\n    font-size: 1.1rem;\n    font-weight: 700;\n    height: 3.8rem;\n    letter-spacing: .1rem;\n    line-height: 3.8rem;\n    padding: 0 3.0rem;\n    text-align: center;\n    text-decoration: none;\n    text-transform: uppercase;\n    white-space: nowrap;\n}\n\n._35F37__button {\n    background-color: transparent;\n    color: #9b4dca;\n}\n\n._35F37__button:focus, ._35F37__button:hover {\n    background-color: transparent;\n    border-color: #606c76;\n    color: #606c76;\n}\n\n._35F37__button[disabled]:focus,\n._35F37__button[disabled]:hover {\n    border-color: inherit;\n    color: #9b4dca;\n}", ""]);
 
 // exports
 exports.locals = {
-	"alert": "_2cqZo__alert",
-	"alert-heading": "_3MnJA__alert-heading",
-	"alert-link": "_1g3aE__alert-link",
-	"alert-dismissible": "_3AG6h__alert-dismissible",
-	"close": "a8uCb__close",
-	"alert-success": "lFWWZ__alert-success",
-	"alert-info": "_2FP2E__alert-info",
-	"alert-warning": "It85e__alert-warning",
-	"alert-danger": "_2CeXz__alert-danger"
+	"button": "_35F37__button"
+};
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _index = __webpack_require__(10);
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Creating a button element and add the class from button.css.
+ * @type {String}
+ */
+var button = '<button class="' + _index2.default['button'] + '">Details</button>';
+
+// Export the button to be used on the other files.
+// Import the styles from index.css file.
+exports.default = button;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(11);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--0-1!./index.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js??ref--0-1!./index.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "._1Xpx___button {\n    margin-top: 20px;\n    margin-bottom: 20px;\n    margin-right: 20px;\n    \n    background-color: #9b4dca;\n    border: 0.1rem solid #9b4dca;\n    border-radius: .4rem;\n    color: #fff;\n    cursor: pointer;\n    display: inline-block;\n    font-size: 1.1rem;\n    font-weight: 700;\n    height: 3.8rem;\n    letter-spacing: .1rem;\n    line-height: 3.8rem;\n    padding: 0 3.0rem;\n    text-align: center;\n    text-decoration: none;\n    text-transform: uppercase;\n    white-space: nowrap;\n}\n._1Xpx___button {\n    background-color: transparent;\n    border-color: transparent;\n    color: #9b4dca;\n}\n\n._1Xpx___button:focus,\n._1Xpx___button:hover {\n    background-color: transparent;\n    border-color: transparent;\n    color: #606c76;\n}\n\n._1Xpx___button[disabled]:focus,\n._1Xpx___button[disabled]:hover {\n    color: #9b4dca;\n}", ""]);
+
+// exports
+exports.locals = {
+	"button": "_1Xpx___button"
 };
 
 /***/ })
